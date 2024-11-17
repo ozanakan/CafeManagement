@@ -1,0 +1,15 @@
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\bin\Debug\net5.0\CafeOrderManager.Model.deps.json
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\bin\Debug\net5.0\CafeOrderManager.Model.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\bin\Debug\net5.0\ref\CafeOrderManager.Model.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\bin\Debug\net5.0\CafeOrderManager.Model.pdb
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\bin\Debug\net5.0\CafeOrderManager.Infrastructure.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\bin\Debug\net5.0\CafeOrderManager.Infrastructure.pdb
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\CafeOrderManager.Model.csproj.AssemblyReference.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\CafeOrderManager.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\CafeOrderManager.Model.AssemblyInfoInputs.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\CafeOrderManager.Model.AssemblyInfo.cs
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\CafeOrderManager.Model.csproj.CoreCompileInputs.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\CafeOrderManager.Model.csproj.CopyComplete
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\CafeOrderManager.Model.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\ref\CafeOrderManager.Model.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Model\obj\Debug\net5.0\CafeOrderManager.Model.pdb

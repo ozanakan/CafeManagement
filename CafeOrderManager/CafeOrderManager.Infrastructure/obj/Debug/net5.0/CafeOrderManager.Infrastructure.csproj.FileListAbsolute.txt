@@ -1,0 +1,12 @@
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\bin\Debug\net5.0\CafeOrderManager.Infrastructure.deps.json
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\bin\Debug\net5.0\CafeOrderManager.Infrastructure.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\bin\Debug\net5.0\ref\CafeOrderManager.Infrastructure.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\bin\Debug\net5.0\CafeOrderManager.Infrastructure.pdb
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\obj\Debug\net5.0\CafeOrderManager.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\obj\Debug\net5.0\CafeOrderManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\obj\Debug\net5.0\CafeOrderManager.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\obj\Debug\net5.0\CafeOrderManager.Infrastructure.AssemblyInfo.cs
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\obj\Debug\net5.0\CafeOrderManager.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\obj\Debug\net5.0\CafeOrderManager.Infrastructure.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\obj\Debug\net5.0\ref\CafeOrderManager.Infrastructure.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Infrastructure\obj\Debug\net5.0\CafeOrderManager.Infrastructure.pdb

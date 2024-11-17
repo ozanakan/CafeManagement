@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CafeOrderManager.Infrastructure/1.0.0": {
+        "runtime": {
+          "CafeOrderManager.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CafeOrderManager.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

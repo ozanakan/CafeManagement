@@ -1,0 +1,17 @@
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\bin\Debug\net5.0\CafeOrderManager.Storage.deps.json
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\bin\Debug\net5.0\CafeOrderManager.Storage.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\bin\Debug\net5.0\ref\CafeOrderManager.Storage.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\bin\Debug\net5.0\CafeOrderManager.Storage.pdb
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\CafeOrderManager.Storage.csproj.AssemblyReference.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\CafeOrderManager.Storage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\CafeOrderManager.Storage.AssemblyInfoInputs.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\CafeOrderManager.Storage.AssemblyInfo.cs
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\CafeOrderManager.Storage.csproj.CoreCompileInputs.cache
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\CafeOrderManager.Storage.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\ref\CafeOrderManager.Storage.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\CafeOrderManager.Storage.pdb
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\bin\Debug\net5.0\CafeOrderManager.Infrastructure.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\bin\Debug\net5.0\CafeOrderManager.Model.dll
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\bin\Debug\net5.0\CafeOrderManager.Model.pdb
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\bin\Debug\net5.0\CafeOrderManager.Infrastructure.pdb
+C:\Users\huawe\OneDrive\Masaüstü\test\CafeOrderManager\CafeOrderManager.Storage\obj\Debug\net5.0\CafeOrderManager.Storage.csproj.CopyComplete

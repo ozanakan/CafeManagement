@@ -1,0 +1,405 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Api\\CafeOrderManager.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Api\\CafeOrderManager.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Api\\CafeOrderManager.Api.csproj",
+        "projectName": "CafeOrderManager.Api",
+        "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Api\\CafeOrderManager.Api.csproj",
+        "packagesPath": "C:\\Users\\huawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\huawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Service\\CafeOrderManager.Service.csproj": {
+                "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Service\\CafeOrderManager.Service.csproj"
+              },
+              "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Storage\\CafeOrderManager.Storage.csproj": {
+                "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Storage\\CafeOrderManager.Storage.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Infrastructure\\CafeOrderManager.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Infrastructure\\CafeOrderManager.Infrastructure.csproj",
+        "projectName": "CafeOrderManager.Infrastructure",
+        "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Infrastructure\\CafeOrderManager.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\huawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\huawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Model\\CafeOrderManager.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Model\\CafeOrderManager.Model.csproj",
+        "projectName": "CafeOrderManager.Model",
+        "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Model\\CafeOrderManager.Model.csproj",
+        "packagesPath": "C:\\Users\\huawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\huawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Infrastructure\\CafeOrderManager.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Infrastructure\\CafeOrderManager.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Service\\CafeOrderManager.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Service\\CafeOrderManager.Service.csproj",
+        "projectName": "CafeOrderManager.Service",
+        "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Service\\CafeOrderManager.Service.csproj",
+        "packagesPath": "C:\\Users\\huawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\huawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Infrastructure\\CafeOrderManager.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Infrastructure\\CafeOrderManager.Infrastructure.csproj"
+              },
+              "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Model\\CafeOrderManager.Model.csproj": {
+                "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Model\\CafeOrderManager.Model.csproj"
+              },
+              "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Storage\\CafeOrderManager.Storage.csproj": {
+                "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Storage\\CafeOrderManager.Storage.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.7.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.7.1, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Storage\\CafeOrderManager.Storage.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Storage\\CafeOrderManager.Storage.csproj",
+        "projectName": "CafeOrderManager.Storage",
+        "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Storage\\CafeOrderManager.Storage.csproj",
+        "packagesPath": "C:\\Users\\huawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Storage\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\huawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Model\\CafeOrderManager.Model.csproj": {
+                "projectPath": "C:\\Users\\huawe\\OneDrive\\Masaüstü\\test\\CafeOrderManager\\CafeOrderManager.Model\\CafeOrderManager.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
