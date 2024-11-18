@@ -117,7 +117,7 @@ namespace CafeOrderManager.Service.Order
         }
 
         public async override Task<bool> _Update(OrderDbo dbo, OrderDto dto)
- {
+        {
 
             var result = new Result<OrderDbo>();
             try
@@ -130,7 +130,7 @@ namespace CafeOrderManager.Service.Order
                 }
 
                 // Güncelleme işlemi
-                var updatedOrder = await _repository.Update(_mapper.ToUpdate(existingOrder,dto));
+                var updatedOrder = await _repository.Update(_mapper.ToUpdate(existingOrder, dto));
 
                 // Mevcut OrderItem'ları al
                 var existingOrderItems = await _orderItemRepository.List(new Model.Dto.OrderItem.OrderItemFilterDto { OrderId = (int)dto.Id });
@@ -157,7 +157,7 @@ namespace CafeOrderManager.Service.Order
 
                         product.StockQuantity -= updatedItem.Quantity;
 
-                        await _orderItemRepository.Update(_orderItemMapper.ToUpdate(orderItem,updatedItem));
+                        await _orderItemRepository.Update(_orderItemMapper.ToUpdate(orderItem, updatedItem));
                     }
                 }
 
@@ -184,22 +184,12 @@ namespace CafeOrderManager.Service.Order
                     .Where(x => !dto.OrderItemList.Any(y => y.Id == x.Id))
                     .ToList();
 
-                //foreach (var deletedItem in deletedOrderItems)
-                //{
-                //    var product = await _productRepository.Detail(deletedItem.ProductId);
-                //    if (product != null)
-                //    {
-                //        product.StockQuantity += deletedItem.Quantity; // Silinen ürünlerin stoğunu geri ekle
-                //    }
-
-                //    await _orderItemRepository.(deletedItem.Id);
-                //}
 
                 // Güncellenmiş stok bilgilerini toplu olarak kaydet
                 var productList = await _productRepository.List(new ProductFilterDto { Track = true });
                 await _productRepository.Update(productList.Data);
 
-                return  true;
+                return true;
             }
             catch (Exception e)
             {
