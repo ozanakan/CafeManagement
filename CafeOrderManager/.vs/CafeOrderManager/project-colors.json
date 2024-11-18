@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "45684551-c2de-43e0-b0e1-0adcfef7244a": {
+      "ProjectGuid": "45684551-c2de-43e0-b0e1-0adcfef7244a",
+      "DisplayName": "CafeOrderManager.Api",
+      "ColorIndex": 0
+    },
+    "9f341472-1f68-4342-bbdb-cbab1ac43759": {
+      "ProjectGuid": "9f341472-1f68-4342-bbdb-cbab1ac43759",
+      "DisplayName": "CafeOrderManager.Storage",
+      "ColorIndex": 1
+    },
+    "ce9999d5-b3c6-46d7-9d6e-038caf90db2b": {
+      "ProjectGuid": "ce9999d5-b3c6-46d7-9d6e-038caf90db2b",
+      "DisplayName": "CafeOrderManager.Service",
+      "ColorIndex": 2
+    },
+    "f95c2979-874a-4923-8c28-e56a1d0256d5": {
+      "ProjectGuid": "f95c2979-874a-4923-8c28-e56a1d0256d5",
+      "DisplayName": "CafeOrderManager.Model",
+      "ColorIndex": 3
+    },
+    "25573859-1c76-4602-889a-b9d6a6c392a6": {
+      "ProjectGuid": "25573859-1c76-4602-889a-b9d6a6c392a6",
+      "DisplayName": "CafeOrderManager.Infrastructure",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}
