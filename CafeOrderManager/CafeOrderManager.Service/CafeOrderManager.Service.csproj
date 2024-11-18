@@ -20,4 +20,8 @@
     <ProjectReference Include="..\CafeOrderManager.Storage\CafeOrderManager.Storage.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Shared\" />
+  </ItemGroup>
+
 </Project>

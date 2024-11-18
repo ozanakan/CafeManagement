@@ -22,7 +22,7 @@ namespace CafeOrderManager.Infrastructure.Models
             ExceptionType = exception?.GetType()?.FullName;
             ExceptionMessageTechnical = exception?.Message;
             ExceptionMessage = exception?.Message;
-            if (ExceptionType?.Contains("BieksperV2") != true)
+            if (ExceptionType?.Contains("CafeOrderManager") != true)
                 ExceptionMessage = "general.error_occured";
             if (ExceptionType?.Contains("UserUnAuthorized") == true)
                 Logout = true;

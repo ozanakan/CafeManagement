@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BieksperV2.Api.Attributes;
+using CafeOrderManager.Api.Attributes;
 using CafeOrderManager.Infrastructure.Bases;
 using CafeOrderManager.Infrastructure.Enums;
 using CafeOrderManager.Infrastructure.Extensions;
