@@ -26,8 +26,7 @@ namespace CafeOrderManager.Service.Security
             IAuthService authService) : base(repository, mapper, authService)
         {
             _settings = settings.Value;
-            //moduleType = ModuleTypeEnum.Security;
-        }
+           }
 
         public async Task<Result<UserListDto>> Login(UserFilterDto filterDto)
         {
@@ -67,94 +66,6 @@ namespace CafeOrderManager.Service.Security
                     result.Success(_mapper.ToListDto(user));
                 else
                     result.Success(null);
-            }
-            catch (Exception exception)
-            {
-                result.Error(exception);
-            }
-
-            return result;
-        }
-
-        public async Task<Result<bool>> ForgetPassword(UserFilterDto filterDto)
-        {
-            var result = new Result<bool>();
-
-            try
-            {
-                if (filterDto.Email == null)
-                {
-                    result.Success(false);
-                    return result;
-                }
-
-                var user = await _repository.DetailWithEmailOrLoginId(filterDto.Email);
-                if (user == null)
-                {
-                    throw new CustomException("validation.email_or_username_not_already_exist");
-                }
-
-                user.PasswordKey = Guid.NewGuid().ToString();
-                await _repository.Update(user);
-
-                result.Success(true);
-            }
-            catch (Exception exception)
-            {
-                result.Error(exception);
-            }
-
-            return result;
-        }
-
-        public async Task<Result<UserListDto>> ResetPassword(UserDto model)
-        {
-            var result = new Result<UserListDto>();
-
-            try
-            {
-                using (TransactionScope tran = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-                {
-                    if (string.IsNullOrEmpty(model.PasswordKey))
-                    {
-                        throw new CustomException("general.error.forget_password_link_empty");
-                    }
-
-                    UserDbo user = await _repository.DetailWithPasswordKey(model.PasswordKey);
-                    if (user == null)
-                        throw new CustomException("general.error.reset_password.user_not_already_exist");
-
-                    if (user.Password != CryptographyExtension.ComputeSha256Hash(model.Password))
-                    {
-                        user.Password = CryptographyExtension.ComputeSha256Hash(model.Password);
-                        user.PasswordKey = "";
-                        bool updateResult = await _repository.Update(user);
-                        if (updateResult)
-                        {
-                            #region Login
-
-                            var userFilter = new UserFilterDto
-                            {
-                                LoginId = user.LoginId,
-                                Password = user.Password,
-                            };
-                            var userDbo = await _repository.Login(userFilter);
-
-                            var newUserLogin = _mapper.ToListDto(userDbo);
-                            newUserLogin.Token =
-                                _authService.CreateAndWriteToken(newUserLogin.Id, false, _settings.JwtSecurityKey);
-
-                            result.Success(newUserLogin);
-                        }
-
-                        #endregion
-
-                        tran.Complete();
-                    }
-                    else
-                        throw new CustomException("message.current_password_must_not_be_same_as_new_password");
-
-                }
             }
             catch (Exception exception)
             {

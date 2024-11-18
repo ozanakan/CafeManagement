@@ -1,5 +1,4 @@
 ﻿using CafeOrderManager.Infrastructure.Bases;
-using CafeOrderManager.Infrastructure.Extensions;
 using CafeOrderManager.Infrastructure.Interfaces;
 using CafeOrderManager.Infrastructure.Models;
 using CafeOrderManager.Model.Dbo;

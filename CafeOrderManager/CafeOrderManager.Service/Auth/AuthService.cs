@@ -9,7 +9,6 @@ using CafeOrderManager.Infrastructure.Exceptions;
 using CafeOrderManager.Infrastructure.Interfaces;
 using CafeOrderManager.Infrastructure.Models;
 using CafeOrderManager.Model.Dto.User;
-//using CafeOrderManager.Service.Shared;
 using CafeOrderManager.Storage.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
@@ -24,13 +23,11 @@ namespace CafeOrderManager.Service.Auth
         public readonly static string JWT_AUDIENCE = "CafeOrderManager_Users";
         private readonly IHttpContextAccessor _context;
         private readonly UserRepository _userRepository;
-        //private readonly NoAuthService _noAuthService;
         private IMemoryCache _memoryCache;
 
-        public AuthService(IMemoryCache memoryCache, UserRepository userRepository,            IHttpContextAccessor context)
+        public AuthService(IMemoryCache memoryCache, UserRepository userRepository, IHttpContextAccessor context)
         {
             _userRepository = userRepository;
-            //_noAuthService = noAuthService;
             _memoryCache = memoryCache;
             _context = context;
         }
@@ -143,53 +140,5 @@ namespace CafeOrderManager.Service.Auth
             get { return _context.HttpContext?.User; }
         }
 
-        //public async Task<bool> HasAccess(params ActionEnum[] actions)
-        //{
-        //    var usr = await GetUser();
-
-        //    if (usr?.Status != StatusEnum.Active)
-        //        throw new UserNotActiveException();
-
-        //    var userActions = usr.Actions;
-
-
-        //    if (userActions == null || !userActions.Any())
-        //        return false;
-
-        //    return actions.All(f => userActions.Contains(f));
-        //}
-
-        //public async Task<bool> HasAccessAny(params ActionEnum[] actions)
-        //{
-        //    var usr = await GetUser();
-
-        //    if (usr?.Status != StatusEnum.Active)
-        //        throw new UserNotActiveException();
-
-        //    var userActions = usr.Actions;
-
-
-        //    if (userActions == null || !userActions.Any())
-        //        return false;
-
-        //    return actions.Any(f => userActions.Contains(f));
-        //}
-
-        //public async Task<bool> RemoveCache(int? userId = null, int? roleId = null)
-        //{
-        //    var filter = new UserFilterDto()
-        //    {
-        //        Id = userId,
-        //        RoleId = roleId,
-        //        StatusList = null
-        //    };
-
-        //    var userList = (await _userRepository.List(filter)).Data;
-
-        //    foreach (var user in userList)
-        //        _memoryCache.Remove(user.Id);
-
-        //    return true;
-        //}
     }
 }

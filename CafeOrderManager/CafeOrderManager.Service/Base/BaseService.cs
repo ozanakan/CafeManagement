@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text.Json;
 using System.Threading.Tasks;
 using System.Transactions;
 using CafeOrderManager.Infrastructure.Bases;
 using CafeOrderManager.Infrastructure.Enums;
 using CafeOrderManager.Infrastructure.Exceptions;
-//using CafeOrderManager.Infrastructure.Extensions;
 using CafeOrderManager.Infrastructure.Interfaces;
 using CafeOrderManager.Infrastructure.Models;
 
@@ -26,7 +23,7 @@ namespace CafeOrderManager.Service.Base
         protected readonly TRepository _repository;
         protected readonly TMapper _mapper;
         protected readonly IAuthService _authService;
-     
+
 
         protected BaseService(TRepository repository, TMapper mapper, IAuthService authService)
         {
@@ -34,13 +31,6 @@ namespace CafeOrderManager.Service.Base
             _mapper = mapper;
             _authService = authService;
         }
-
-        //protected BaseService(TRepository repository, TMapper mapper, IAuthService authService)
-        //{
-        //    _repository = repository;
-        //    _mapper = mapper;
-        //    _authService = authService;
-        //}
 
         public virtual async Task<Result<IEnumerable<TListDto>>> List(TFilterDto filterDto)
         {
@@ -89,27 +79,8 @@ namespace CafeOrderManager.Service.Base
             var result = new Result<IEnumerable<int>>();
             try
             {
-                //using (TransactionScope tran = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-                //{
-                    var dbo = await _Create(dto);
-
-                    //foreach (var item in dbo)
-                    //{
-                    //    var dboNew = item.GetLogProps();
-
-                    //    //Create log
-                    //    CreateLog(ActionTypeEnum.Create, dboNew);
-
-                    //    await RemoveCache(ActionTypeEnum.Create, item);
-                    //}
-
-                    //Get created model
-
-
-                    result.Success(dbo.Select(x => x.Id));
-
-                //    tran.Complete();
-                //}
+                var dbo = await _Create(dto);
+                result.Success(dbo.Select(x => x.Id));
             }
             catch (Exception exception)
             {
@@ -137,18 +108,7 @@ namespace CafeOrderManager.Service.Base
                     if (dbo == null)
                         throw new RecordNotFoundException();
 
-                    ////Get first version of model
-                    //var dboOld = dbo.GetLogProps();
-
                     result.Success(await _Update(dbo, dto));
-
-                    ////Get last version of model
-                    //var dboNew = dbo.GetLogProps();
-
-                    ////Create log
-                    //CreateLog(ActionTypeEnum.Update, dboNew, dboOld);
-
-                    //await RemoveCache(ActionTypeEnum.Update, dbo);
 
                     tran.Complete();
                 }
@@ -176,18 +136,8 @@ namespace CafeOrderManager.Service.Base
                 if (dbo == null)
                     throw new RecordNotFoundException();
 
-                ////Get first version of model
-                //var dboOld = dbo.GetLogProps();
-
                 result.Success(await _UpdateStatus(dbo, status));
 
-                ////Get last version of model
-                //var dboNew = dbo.GetLogProps();
-
-                ////Create log
-                //CreateLog(ActionTypeEnum.Update, dboNew, dboOld);
-
-                //await RemoveCache(ActionTypeEnum.Update, dbo);
             }
             catch (Exception exception)
             {
@@ -208,22 +158,7 @@ namespace CafeOrderManager.Service.Base
             try
             {
                 var dbo = await _repository.Detail(id, true);
-
-                //if (dbo == null)
-                //    throw new RecordNotFoundException();
-
-                ////Get first version of model
-                //var dboOld = dbo.GetLogProps();
-
                 result.Success(await _Delete(dbo));
-
-                ////Get last version of model
-                //var dboNew = dbo.GetLogProps();
-
-                ////Create log
-                //CreateLog(ActionTypeEnum.Delete, dboNew, dboOld);
-
-                //await RemoveCache(ActionTypeEnum.Delete, dbo);
             }
             catch (Exception exception)
             {
@@ -252,20 +187,10 @@ namespace CafeOrderManager.Service.Base
                     var updatedDboList = new List<TDbo>();
                     foreach (var dbo in dboList)
                     {
-                        ////Get first version of model
-                        //var dboOld = dbo.GetLogProps();
 
                         var newDbo = _mapper.ToUpdateStatus(dbo, StatusEnum.Deleted);
 
                         updatedDboList.Add(newDbo);
-
-                        ////Get last version of model
-                        //var dboNew = newDbo.GetLogProps();
-
-                        ////Create log
-                        //CreateLog(ActionTypeEnum.Delete, dboNew, dboOld);
-
-                        //await RemoveCache(ActionTypeEnum.Delete, dbo);
                     }
 
                     await _repository.Update(updatedDboList);
@@ -318,47 +243,6 @@ namespace CafeOrderManager.Service.Base
             return (_mapper.ToDropdown(list.Data), list.Pagination);
         }
 
-        //public virtual async Task RemoveCache(ActionTypeEnum actionType, TDbo dbo)
-        //{
-        //}
 
-        //public virtual void CreateLog(ActionTypeEnum actionType, List<LogChangesDto> newModel, List<LogChangesDto> oldModel = null)
-        //{
-        //    if (moduleType != null)
-        //    {
-        //        var changes = newModel.GetChanges(oldModel);
-        //        if (!string.IsNullOrEmpty(changes))
-        //            BackgroundProcessService.AddProcess(new BackgroundProcessDto
-        //            {
-        //                ProcessData = new
-        //                {
-        //                    createdUserId = _authService.GetUserId(),
-        //                    moduleType,
-        //                    actionType,
-        //                    tableId = newModel.GetTableId(),
-        //                    changes = newModel.GetChanges(oldModel)
-        //                },
-        //                ProcessType = BackgroundProcessTypeEnum.CreateLog
-        //            });
-        //    }
-        //}
-
-        //protected async Task<Result<bool>> BatchDelete(TFilterDto filter)
-        //{
-        //    var result = new Result<bool>();
-        //    try
-        //    {
-        //        if (filter != null)
-        //            await _repository.BatchDelete(filter);
-
-        //        return result.Success(true);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        result.Error(e);
-        //    }
-
-        //    return result;
-        //}
     }
 }

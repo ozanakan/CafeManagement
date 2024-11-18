@@ -22,6 +22,5 @@ namespace CafeOrderManager.Infrastructure.Interfaces
         Task<bool> _Delete(TDbo dbo);
         Task<Result<IEnumerable<DropdownDto>>> Dropdown(TFilterDto filterDto);
         Task<(IEnumerable<DropdownDto> Data, PaginationDto Pagination)> _Dropdown(TFilterDto filterDto);
-        //Task RemoveCache(ActionTypeEnum actionType, TDbo dbo);
     }
 }

@@ -31,22 +31,6 @@ namespace CafeOrderManager.Api.Controllers
             return result.EnsureSucces() ? Ok(result) : NotFound(result);
         }
 
-        // POST: security/forgetpassword
-        [AllowAnonymous]
-        [HttpPost("forgetpassword")]
-        public async Task<IActionResult> ForgetPassword([FromBody] UserFilterDto filterDto)
-        {
-            var result = await _service.ForgetPassword(filterDto);
-            return result.EnsureSucces() ? Ok(result) : NotFound(result);
-        }
-
-        // POST: security/forgetpassword
-        [AllowAnonymous]
-        [HttpPost("resetpassword")]
-        public async Task<IActionResult> ResetPassword([FromBody] UserDto model)
-        {
-            var result = await _service.ResetPassword(model);
-            return result.EnsureSucces() ? Ok(result) : NotFound(result);
-        }
+    
     }
 }

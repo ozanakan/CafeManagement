@@ -14,45 +14,39 @@ namespace CafeOrderManager.Model.Dbo
         [StringLength(30)]
         [Required]
         [Log(DataTypeEnum.String)]
-        public string Name { get; set; } //user name
+        public string Name { get; set; } 
 
         [StringLength(30)]
         [Required]
         [Log(DataTypeEnum.String)]
-        public string Surname { get; set; } //user surname
+        public string Surname { get; set; } 
 
         [StringLength(20)]
         [Required]
         [Log(DataTypeEnum.String)]
-        public string LoginId { get; set; } //user login id (username)
+        public string LoginId { get; set; } 
 
         [StringLength(64)]
         [Log(DataTypeEnum.String)]
         [Required]
-        public string Password { get; set; } //user password
+        public string Password { get; set; } 
 
         [StringLength(100)]
         [Log(DataTypeEnum.String)]
-        public string PasswordKey { get; set; } //Code sent because you forgot your password (verified) 
+        public string PasswordKey { get; set; }
 
         [StringLength(50)]
         [Log(DataTypeEnum.String)]
-        public string Email { get; set; } //email
+        public string Email { get; set; } 
 
         [Log(DataTypeEnum.String)]
         [StringLength(20)]
-        public string Phone { get; set; }  //Phone
+        public string Phone { get; set; }  
 
 
         public virtual UserDbo CreatedUser { get; set; }
 
-
-
-        #region CreatedUser References
-
-        //User
         public virtual ICollection<UserDbo> CreatedUserUsers { get; set; }
 
-        #endregion
     }
 }

@@ -22,7 +22,6 @@ namespace CafeOrderManager.Service.Order
             dto.OrderNumber = dbo.OrderNumber;
             dto.OrderStatus = dbo.OrderStatus;
             dto.TableId = dbo.TableId;
-            //dto.OrderItemList = _orderItemMapper.ToListDto(dbo.OrderItems);
             dto.OrderItemList = _orderItemMapper.ToListDto(dbo.OrderItems); // Koleksiyon dönüşümü
             return dto;
         }

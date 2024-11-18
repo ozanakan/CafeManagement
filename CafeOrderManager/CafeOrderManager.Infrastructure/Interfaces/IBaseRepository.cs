@@ -23,9 +23,6 @@ namespace CafeOrderManager.Infrastructure.Interfaces
 
         Task<IEnumerable<TDbo>> Update(IEnumerable<TDbo> dbos);
 
-        //Task<int> BatchUpdate(TFilterDto filter, Expression<Func<TDbo, TDbo>> updateFactory);
-
-        //Task<int> BatchDelete(TFilterDto filter);
         bool CreateValidation(TDbo dbo);
         bool UpdateValidation(TDbo dbo);
         Task<bool> Any(TFilterDto filter);

@@ -5,8 +5,7 @@ namespace CafeOrderManager.Infrastructure.Models
 {
     public class Result
     {
-        //protected Serilog.Core.Logger logger = new LoggerConfiguration().WriteTo.Console().CreateLogger();
-
+        
         public HttpStatus Status { get; set; }
 
         public string ExceptionType { get; set; }
@@ -27,7 +26,6 @@ namespace CafeOrderManager.Infrastructure.Models
                 ExceptionMessage = "general.error_occured";
             if (ExceptionType?.Contains("UserUnAuthorized") == true)
                 Logout = true;
-            //logger?.Error(exception, exception?.Message);
         }
 
         public void ValidationError(string errorMsg = "")
@@ -35,7 +33,6 @@ namespace CafeOrderManager.Infrastructure.Models
             Status = HttpStatus.Error;
             ExceptionMessage = errorMsg ?? "validation.not_valid";
             ExceptionMessageTechnical = errorMsg ?? "validation.not_valid";
-            //logger?.Error(ExceptionMessage);
         }
     }
 
