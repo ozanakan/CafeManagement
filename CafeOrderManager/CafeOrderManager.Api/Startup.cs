@@ -135,14 +135,10 @@ namespace CafeOrderManager.Api
 
         private void RegisterService(IServiceCollection services)
         {
-            //services.AddScoped<MailManager>();
             services.AddHttpContextAccessor();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.Configure<SettingsConfig>(Configuration.GetSection("Settings"));
-            //services.Configure<S3SettingsConfig>(Configuration.GetSection("S3Settings"));
-            //services.Configure<MailSettingsDto>(Configuration.GetSection("MailSettings"));
-
-
+        
             // Mappers
             services.AddScoped<TableMapper>();
             services.AddScoped<UserMapper>();
@@ -151,19 +147,15 @@ namespace CafeOrderManager.Api
             services.AddScoped<OrderMapper>();
             services.AddScoped<OrderItemMapper>();
 
-
             // Services
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<AuthService>();
-            //services.AddScoped<UserService>();
             services.AddScoped<SecurityService>();
             services.AddScoped<CategoryService>();
             services.AddScoped<ProductService>();
             services.AddScoped<TableService>();
             services.AddScoped<OrderService>();
             services.AddScoped<OrderItemService>();
-
-
 
             //Repositories
             services.AddScoped<UserRepository>();
@@ -172,8 +164,6 @@ namespace CafeOrderManager.Api
             services.AddScoped<ProductRepository>();
             services.AddScoped<OrderRepository>();
             services.AddScoped<OrderItemRepository>();
-
-
 
         }
     }

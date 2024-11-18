@@ -10,7 +10,6 @@ const App = () => {
         setLoaded(true)
     }
     const token = store.get('token')
-    console.log("loaded", loaded)
     return (
         <>
             <div className="App">

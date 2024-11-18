@@ -56,7 +56,6 @@ const LeftSection = ({ onChangeCollapsed }) => {
             onClick={onClick}
           >
             {leftMenu?.map((menu) => {
-              console.log("menu", menu)
               return (
                 <>
                   {menu.children && menu.children.length > 0 ? (

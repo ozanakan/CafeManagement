@@ -43,7 +43,6 @@ const Login = ({ }) => {
                     showAlertOnError: true,
                     showLoading: true,
                     onSuccess: async ({ data }) => {
-                        console.log("data", data);
                         store.set("token", data.token);
                         window.location.href = "/";
                     },

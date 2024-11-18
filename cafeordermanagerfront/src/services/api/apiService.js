@@ -89,7 +89,6 @@ const makeApiCall = async payload => {
             return {}
         }
         if (statusCodeString.startsWith("4")) {
-            console.log("error", error?.response?.data?.exceptionMessage);
             return {
                 error: true,
                 errorMessage: error?.response?.data?.exceptionMessage,

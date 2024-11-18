@@ -6,7 +6,6 @@ const RouterHelper = ({ component }) => {
     if (token)
         return <Admin>{component}</Admin>
     else {
-        console.log("redirect")
         window.location.href = "/auth/login"
     }
 }
