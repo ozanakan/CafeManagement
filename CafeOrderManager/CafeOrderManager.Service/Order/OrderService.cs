@@ -219,6 +219,32 @@ namespace CafeOrderManager.Service.Order
                 dbo.OrderStatus = model.OrderStatus;
                 var updateResult = await _repository.Update(dbo);
 
+                if (model.OrderStatus == OrderStatusEnum.Cancelled)
+                {
+                    // Siparişe bağlı olan ürünleri getir
+                    var orderItems = await _orderItemRepository.List(new Model.Dto.OrderItem.OrderItemFilterDto { OrderId = dbo.Id });
+                    if (!orderItems.Data.Any())
+                    {
+                        throw new CustomException("Siparişe bağlı ürün bulunamadı");
+                    }
+
+                    // Ürün listesini çek
+                    var productList = await _productRepository.List(new ProductFilterDto { Track = true });
+
+                    foreach (var orderItem in orderItems.Data)
+                    {
+                        // İlgili ürünü bul
+                        var product = productList.Data.FirstOrDefault(p => p.Id == orderItem.ProductId);
+                        if (product == null)
+                            continue; // Ürün bulunamazsa döngüye devam et
+
+                        // Stok miktarını eski haline getir
+                        product.StockQuantity += orderItem.Quantity;
+                    }
+
+                    // Tüm ürünleri toplu olarak güncelle
+                    await _productRepository.Update(productList.Data); // BatchUpdate metodu varsayılıyor
+                }
 
                 // İşlem başarılı
                 result.Success(true);
