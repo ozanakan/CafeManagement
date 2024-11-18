@@ -1,7 +1,10 @@
 Ozan Akan
 
+Db bağlantı:
 
-Veritabanı Diegram
+Kullanılan Teknolojiler:
+
+Veritabanı Diegram:
 https://drive.google.com/file/d/1OPTFo22kYakNGKXrVFfE16C18aQ-aMII/view?usp=sharing
 
 Front Taraf için
