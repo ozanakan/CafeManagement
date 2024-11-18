@@ -1,12 +1,12 @@
-Ozan Akan TestCase
+# Ozan Akan TestCase
 
-Supabase Db bağlantı
+### Supabase Db bağlantı
 
 UserId=postgres.qawbhkgmatfehwjzsarq ,
 Password=biY$Wcg%o8r$MMo%td#T3Gt5x ,
 Server=aws-0-eu-central-1.pooler.supabase.com , Port=6543 , Database=postgres
 
-Kullanılan Teknolojiler
+### Kullanılan Teknolojiler
 
 FrontEnd:
 React.js,Ant Design,Axios,React Redux,i18next,React Router
@@ -15,10 +15,10 @@ BackEnd:
 Generic Repository Pattern,Entity Framework Core,PostgreSQL,JWT Authentication
 
 
-Veritabanı Diegram:
+### ER Diyagramı
 https://drive.google.com/file/d/1OPTFo22kYakNGKXrVFfE16C18aQ-aMII/view?usp=sharing
 
-React Projesini Çalıştırmak İçin:
+### React Projesini Çalıştırmak İçin
 
 Proje dizinide .env içerisinden API URL'sini düzenleyin.
 
