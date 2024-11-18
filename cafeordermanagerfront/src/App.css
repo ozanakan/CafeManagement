@@ -1,0 +1,12 @@
+body {
+    font-family: "inter";
+    background: #eee;
+    margin: 0;
+    color: #777777;
+}
+
+.tree-dot {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

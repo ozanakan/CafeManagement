@@ -1,0 +1,44 @@
+.float-label {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  
+  > span {
+    z-index: initial !important;
+  }
+
+  .label {
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 12px;
+    top: 9px;
+    transition: 0.2s ease all;
+    background-color: #fff;
+    
+    &.label-middle {
+      top: 6px;
+    }
+
+    &.label-small {
+      top: 3px;
+    }
+
+    &.label-float {
+      top: -10px;
+      font-size: 12px !important;
+      background: white;
+      padding: 0 4px;
+      margin-left: -4px;
+      margin-top: -3px;
+    }
+
+    &.label-float-disabled {
+      top: -18px;
+      font-size: 12px !important;
+      background: transparent;
+      padding: 0 4px;
+      margin-left: -4px;
+    }
+  }
+}

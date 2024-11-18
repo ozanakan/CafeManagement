@@ -1,0 +1,26 @@
+.right-section {
+    width: 100%;
+    > .header {
+        background-color: #fff;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        >.right-menu{
+            display: flex;
+             flex-direction: row-reverse;
+        }
+        >.team-selector {
+            display: flex;
+            justify-content: center;
+            width: inherit;
+        }
+    }
+    > .content {
+        // background: #fff;
+        margin: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+}

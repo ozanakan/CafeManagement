@@ -1,0 +1,24 @@
+.auth-container {
+    background-image: url("../../assets/img/auth/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .language-select {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    .form-modal-mobil,
+    .form-modal {
+        background: #fff;
+        box-shadow: 0 0 10px #262424;
+        border-radius: 5px;
+    }
+    .form-modal-mobil {
+     margin: 20px;
+    }
+}

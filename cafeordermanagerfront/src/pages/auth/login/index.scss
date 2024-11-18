@@ -1,0 +1,85 @@
+.login {
+    display: flex;
+    min-width: 300px;
+
+    >.left {
+
+        width: 300px;
+
+        >img {}
+    }
+
+    >.right {
+        padding: 40px;
+        position: relative;
+
+        >.language-select {
+            position: absolute;
+            right: 0;
+            top: 5px;
+        }
+
+        >.title {
+            font-size: 30px;
+            padding: 20px 0 0 0;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        >.button {
+            text-align: center;
+        }
+    }
+}
+
+.send-code {
+    font-size: 13px;
+    text-align: right;
+    cursor:pointer; 
+    display: flex;
+    justify-content: center;
+}
+
+.info-text {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #707070;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-code-item {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 20px;
+        width: 35px;
+        object-fit: contain;
+        margin-right: 3px;
+    }
+}
+
+.forgot-pass-text{
+    font-size: 12px;
+     margin-bottom: 8px;
+    color: rgba(62, 125, 104, 1);
+    font-weight: bold;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    cursor:pointer;
+}
+
+.register-text{
+    font-size: 13px;
+    margin-top: 8px;
+    color: rgba(62, 125, 104, 1);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
