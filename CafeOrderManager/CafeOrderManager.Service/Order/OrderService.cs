@@ -12,7 +12,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Transactions;
 
 namespace CafeOrderManager.Service.Order
 {
@@ -199,7 +198,6 @@ namespace CafeOrderManager.Service.Order
             return true;
         }
 
-
         public async Task<Result<bool>> OrderStatusUpdate(OrderDto model)
         {
             var result = new Result<bool>();
@@ -221,29 +219,7 @@ namespace CafeOrderManager.Service.Order
 
                 if (model.OrderStatus == OrderStatusEnum.Cancelled)
                 {
-                    // Siparişe bağlı olan ürünleri getir
-                    var orderItems = await _orderItemRepository.List(new Model.Dto.OrderItem.OrderItemFilterDto { OrderId = dbo.Id });
-                    if (!orderItems.Data.Any())
-                    {
-                        throw new CustomException("Siparişe bağlı ürün bulunamadı");
-                    }
-
-                    // Ürün listesini çek
-                    var productList = await _productRepository.List(new ProductFilterDto { Track = true });
-
-                    foreach (var orderItem in orderItems.Data)
-                    {
-                        // İlgili ürünü bul
-                        var product = productList.Data.FirstOrDefault(p => p.Id == orderItem.ProductId);
-                        if (product == null)
-                            continue; // Ürün bulunamazsa döngüye devam et
-
-                        // Stok miktarını eski haline getir
-                        product.StockQuantity += orderItem.Quantity;
-                    }
-
-                    // Tüm ürünleri toplu olarak güncelle
-                    await _productRepository.Update(productList.Data); // BatchUpdate metodu varsayılıyor
+                    await RestoreStockForCancelledOrder(dbo.Id);
                 }
 
                 // İşlem başarılı
@@ -259,6 +235,35 @@ namespace CafeOrderManager.Service.Order
             return result;
         }
 
+        private async Task RestoreStockForCancelledOrder(int orderId)
+        {
+            // Siparişe bağlı ürünleri getir
+            var orderItemsResult = await _orderItemRepository.List(new Model.Dto.OrderItem.OrderItemFilterDto { OrderId = orderId });
+            var orderItems = orderItemsResult.Data;
+
+            if (!orderItems.Any())
+            {
+                throw new CustomException("Siparişe bağlı ürün bulunamadı");
+            }
+
+            // Tüm ürünleri getir
+            var productListResult = await _productRepository.List(new ProductFilterDto { Track = true });
+            var productList = productListResult.Data;
+
+            foreach (var orderItem in orderItems)
+            {
+                // İlgili ürünü bul
+                var product = productList.FirstOrDefault(p => p.Id == orderItem.ProductId);
+                if (product == null)
+                    continue;
+
+                // Stok miktarını eski haline getir
+                product.StockQuantity += orderItem.Quantity;
+            }
+
+            // Tüm ürünleri toplu olarak güncelle
+            await _productRepository.Update(productList);
+        }
 
     }
 }
